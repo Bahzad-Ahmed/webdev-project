@@ -1,0 +1,32 @@
+<h1 class="mt-3 display-4 text-center">Outbox</h1>
+<div class="container" style="margin-top: 70px;">
+    <table class="table table-hover">
+      <thead>
+        <tr class="bg-warning">
+          <th>Sent to</th>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Date Sent</th>
+          <th>View</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class= "bg-dark text-white" *ngFor="let i of emails">
+  
+          <td>{{ i.id }}</td>
+          <td> {{ i.name }}</td>
+          <td> {{ i.subject}}</td>
+          <td> {{ i.datesent}}</td>
+          <td>
+            <button class="btn btn-warning font-weight-bold"  (click)="selectEmail(i)" > Show details</button>
+          </td>
+          
+          <td>
+            <button class="btn btn-warning font-weight-bold" (click)="del(i)"> Delete Permenently</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

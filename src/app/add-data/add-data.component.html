@@ -1,0 +1,57 @@
+
+<div class="m-2 row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="form-group">
+        <label>Account ID</label>
+        <input
+          type="text"
+          class="form-control"
+          #ID>
+      </div>
+
+      <div class="form-group">
+        <label>Account Name</label>
+        <input
+          type="text"
+          class="form-control"
+          #name>
+      </div>
+
+      <div class="form-group">
+        <label>Subject</label>
+        <input
+          type="text"
+          class="form-control"
+          #subject>
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input
+          type="text"
+          class="form-control"
+          #date>
+      </div>
+
+      <div class="form-group">
+        <label>Message Body</label>
+          <textarea class="form-control" rows="8" #data></textarea>
+      </div>
+
+      <div class="form-group">
+        <select class="form-control" #type>
+          <option value="inbox">Inbox</option>
+          <option value="trash">Trash</option>
+          <option value="spam">Spam</option>
+          <option value="outbox">Outbox</option>
+        </select>
+      </div>
+      <button
+        class="btn btn-primary"
+        (click)="onCreateEmail(ID.value,name.value,subject.value,date.value,data.value,type.value)">
+        Add Account
+      </button>
+    </div>
+  </div>
+  
+        
